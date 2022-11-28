@@ -65,3 +65,21 @@ im_w.sort()
 print(im_w)
 
 mlista = ["Kraków",67,0.55,True]
+
+#krotka
+
+miasto = ("Kraków","Lublin","Kielce","Rzeszów","Kalisz","Gdańsk","Kraków")
+
+df = miasto.index("Kielce")
+print(df)
+print(miasto.count("Kraków"))
+
+lmiasto = list(miasto)
+print(lmiasto)
+
+lmiasto.insert(2,"Zamość")
+print(lmiasto)
+
+miasto = tuple(lmiasto)
+print(miasto)
+
