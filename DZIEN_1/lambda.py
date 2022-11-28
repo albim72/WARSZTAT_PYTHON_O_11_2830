@@ -12,3 +12,6 @@ def ob(k):
     return lambda a,n:a*k+2*n
 
 print(ob(2)(n=6, a=2))
+
+
+num = [67,2,5,177,-99,0,9,12,7,1,-4,0,5,7,18]
