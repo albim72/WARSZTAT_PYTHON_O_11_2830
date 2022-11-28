@@ -30,14 +30,17 @@ for i in wznowienie(5,8):
     print(f"zwrócono wartość -> {i}")
 
 #przykład 3
-
+import time
 def genret():
     for i in range(7):
         if i==5:
             print("Przerwanie")
             return
         else:
+            time.sleep(2)
             yield i
 
 for t in genret():
+    if t==2:
+        continue
     print(t)
