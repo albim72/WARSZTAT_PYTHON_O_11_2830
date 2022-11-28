@@ -1,3 +1,5 @@
+import math
+
 print((lambda e:e**2)(56))
 
 b = lambda u,m:u+202-m
@@ -37,3 +39,37 @@ print(cube)
 
 cube = list(map(lambda x:x**3,zn))
 print(cube)
+
+
+#własne funkcje wyższego rzędu
+def filtruj(dane,test):
+     plus = []
+     for element in dane:
+         if (test(element)):
+             plus.append(element)
+     return plus
+
+def ekstra_liczba(n):
+    return n>=100
+
+lb = [119,8,10,-189,23,445,45,67,99,101]
+print(filtruj(lb,ekstra_liczba))
+
+def mapowanie(dane,transformacja):
+    mapa=[]
+    for element in dane:
+        mapa.append(transformacja(element,(element/3)))
+    return mapa
+
+def addfive(n,k=0):
+    return n+5
+
+def licz(k,m):
+    return k*m/4
+
+def piwerw(k,m):
+    return k*math.sqrt(abs(m))
+
+print(mapowanie(lb,addfive))
+print(mapowanie(lb,licz))
+print(mapowanie(lb,piwerw))
