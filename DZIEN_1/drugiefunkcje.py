@@ -25,3 +25,7 @@ def ranking(r1,r2,r3):
     print(f'ranking języków programowania -> piwerwsze miejsce:{r1},drugie miejsce: {r2},'
           f'trzecie miejsceL {r3}')
 
+
+def rank_list(*lang,nrrank):
+    print(f"nr. rankingu: {nrrank} > ranking języków programowania -> piwerwsze miejsce:{lang[0]},drugie miejsce: {lang[1]}, "
+          f"trzecie miejsce {lang[2]}")
