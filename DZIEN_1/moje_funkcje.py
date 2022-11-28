@@ -15,6 +15,8 @@ print(n)
 
 zewnetrzna()
 
+rank_list("C++","Python","Java",nrrank=23)
+
 print(gx(5,8,9,23))
 print(gx(5,8,9))
 print(gx(5))
