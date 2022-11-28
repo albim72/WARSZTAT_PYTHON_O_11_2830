@@ -1,3 +1,4 @@
+from drugie_funkcje import zewnetrzna
 #funkcja 1
 
 def k(j):
@@ -12,4 +13,5 @@ def policz(a,b,c,y):
 print(policz(5,7,2,2))
 print(n)
 
+zewnetrzna()
 
