@@ -14,3 +14,26 @@ print(sam.format(marka,model,rocznik))
 #f-string
 
 print(f"autokomis -> samochód {marka}, model: {model}, rocznik: {rocznik}")
+
+konkurs = [
+    ("Jan",78),
+    ("Olga",67),
+    ("Alicja",88),
+    ("Janusz",69),
+    ("Krzysztof",70),
+    ("Janina",98),
+    ("Jurek",58)
+]
+
+# info = (45,)
+# print(info)
+# print(type(info))
+
+print("______________________________________________________")
+print(list(enumerate(konkurs)))
+
+print("__________________zestawienie wyników konkursu____________________________________")
+
+for i,(imie,punkty) in enumerate(konkurs):
+    print('nr %d: %-9s : %.1f punktów' %(i+1,imie,punkty))
+
