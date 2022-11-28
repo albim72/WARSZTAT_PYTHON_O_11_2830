@@ -1,0 +1,16 @@
+marka = "Jeep"
+model = "Cherokee"
+rocznik = 2020
+
+print(marka,model,rocznik,sep=" -- ")
+print("samochód: " + marka + " "+ model + " " + str(rocznik))
+
+sam = "samochód -> marka: {}, model: {}, rocznik: {}."
+print(sam.format(marka,model,rocznik))
+
+sam = "samochód -> rocznik: {2}, marka: {0}, model: {1}."
+print(sam.format(marka,model,rocznik))
+
+#f-string
+
+print(f"autokomis -> samochód {marka}, model: {model}, rocznik: {rocznik}")
