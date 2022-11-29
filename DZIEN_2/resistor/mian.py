@@ -29,6 +29,7 @@ try:
 except ValueError as ve:
       print(ve)
 except Exception as e:
+      print(type(e))
       print(e)
 else:
       print(f'oporność wynosi: {r3.ohms}')
