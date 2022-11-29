@@ -4,5 +4,5 @@ def czytaj_liste(lista):
         
         
 def czytaj_dict(slownik):
-    for x,y in dict.items():
+    for x,y in slownik.items():
         print(f'klucz -> {x}: wartość -> {y}.')
