@@ -7,7 +7,13 @@ class Switch(object):
 def case(*args):
     return any((arg==Switch.value for arg in args))
 
+
 n = int(input("podaj cyfrę (0-9): "))
+
+s1 = Switch(n)
+s2 = Switch(5)
+
+print(s1==s2)
 
 while Switch(n):
     if case(0):
