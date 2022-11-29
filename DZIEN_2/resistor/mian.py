@@ -26,8 +26,13 @@ print("________________klasa BoundedResistance____________________")
 try:
       r3 = BoundedResistance(1E2)
       r3.ohms = -20
-      print(f'oporność wynosi: {r3.ohms}')
 except ValueError as ve:
       print(ve)
+except Exception as e:
+      print(e)
+else:
+      print(f'oporność wynosi: {r3.ohms}')
+finally:
+      print(f'używasz klasy: {r3.__class__.__name__}')
 
 
