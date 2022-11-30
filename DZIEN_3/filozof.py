@@ -8,6 +8,9 @@ else:
 def odpowiedz(self,*args):
     return "tak ziemia jest płaska!"
 
+def odpowiedz_new(self,*args):
+    return "nie! ziemia jest okrągła!"
+
 def brak(self,*args):
     return "brak odpowiedzi..."
 
@@ -15,7 +18,10 @@ def brak(self,*args):
 class SednoOdpowiedzi(type):
     def __init__(cls,clsname,supercls,attribs):
         if required:
-            cls.odpowiedz = odpowiedz
+            if clsname == "Kopernik":
+                cls.odpowiedz = odpowiedz_new
+            else:
+                cls.odpowiedz = odpowiedz
         else:
             cls.odpowiedz = brak
 
@@ -29,12 +35,19 @@ class Platon(metaclass=SednoOdpowiedzi):
 class SwTomasz(metaclass=SednoOdpowiedzi):
     pass
 
+class Kopernik(metaclass=SednoOdpowiedzi):
+    # def odpowiedz(self, *args):
+    #     return "nie! ziemia jest okrągła!"
+    pass
+
 
 fil1 = Arystoteles()
 fil2 = Platon()
 fil3 = SwTomasz()
+fil4 = Kopernik()
 
-print(fil1.odpowiedz())
-print(fil2.odpowiedz())
-print(fil3.odpowiedz())
+print(f"filozof: {fil1.__class__.__name__} odpowiada: {fil1.odpowiedz()}")
+print(f"filozof: {fil2.__class__.__name__} odpowiada: {fil2.odpowiedz()}")
+print(f"filozof: {fil3.__class__.__name__} odpowiada: {fil3.odpowiedz()}")
+print(f"filozof: {fil4.__class__.__name__} odpowiada: {fil4.odpowiedz()}")
 
