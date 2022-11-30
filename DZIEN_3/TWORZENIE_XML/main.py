@@ -31,3 +31,35 @@ pod.text = '4'
 
 kolor=SubElement(wyp_dod,'kolor')
 kolor.text = 'czarna perła'
+
+#drugi samochód
+
+sam2 = SubElement(top,'samochod')
+
+id=SubElement(sam2,'id')
+id.text = 's2'
+
+marka=SubElement(sam2,'marka')
+marka.text = 'Subaru'
+
+model=SubElement(sam2,'model')
+model.text = 'Outback'
+
+poj=SubElement(sam2,'pojemnosc')
+poj.text = '2.4'
+
+rok=SubElement(sam2,'rocznik')
+rok.text = '2018'
+
+cena=SubElement(sam2,'cena')
+cena.text = '132000'
+
+wyp_dod = SubElement(sam2,'wyposazenie_dod')
+
+klima=SubElement(wyp_dod,'klimatyzacja')
+klima.text = 'RER4436'
+
+kolor=SubElement(wyp_dod,'kolor')
+kolor.text = 'czarwony metallic'
+
+print(pretty(top))
