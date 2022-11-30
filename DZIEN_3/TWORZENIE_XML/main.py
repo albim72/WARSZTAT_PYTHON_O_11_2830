@@ -63,3 +63,8 @@ kolor=SubElement(wyp_dod,'kolor')
 kolor.text = 'czarwony metallic'
 
 print(pretty(top))
+
+with open("autokomis.xml","w",encoding="utf-8") as f:
+    f.write(pretty(top))
+
+
